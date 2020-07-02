@@ -18,7 +18,7 @@ const FormLogin = styled.section`
 
 
 `;
-const ContentX = styled(Content)`
+const ContentX = styled.section`
       background: white;
 `;
 

@@ -4,7 +4,7 @@ import {Layout, Menu, Button} from 'antd';
 import {Link, useHistory} from 'react-router-dom';
 
 const {Header} = Layout;
-
+const {Content} = Layout;
 const header=styled(Header)`
       background: white;
 `
@@ -44,7 +44,10 @@ const LayoutX = (props: any) => {
 
                 </Menu>
             </header>
-            {props.children}
+            <Content style={{background:'white'}}>
+                {props.children}
+
+            </Content>
 
         </Layout>
     );

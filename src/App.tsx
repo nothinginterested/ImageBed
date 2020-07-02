@@ -7,11 +7,10 @@ import {
 } from 'react-router-dom';
 import {Button, Layout, Menu} from 'antd';
 import Login from './Views/Login';
-import LayoutX from './Components/Layout';
 import Register from './Views/Register';
 import Users from './Views/User';
+import Upload from './Views/Upload';
 
-const { Header, Content, Footer } = Layout;
 export default function App() {
     return (
         <Router>
@@ -33,7 +32,7 @@ export default function App() {
                     </Route>
 
                     <Route path="/">
-                    <Login/>
+                    <Upload/>
                     </Route>
 
                 </Switch>

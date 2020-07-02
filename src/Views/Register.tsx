@@ -6,7 +6,6 @@ import {Form, Input, Button, Checkbox, Layout} from 'antd';
 import {useStore} from '../Store';
 import {useHistory} from 'react-router';
 
-const {Header, Content, Footer} = Layout;
 const FormRegister = styled.section`
       background: white;
       max-width: 600px;
@@ -18,7 +17,7 @@ const FormRegister = styled.section`
 
 
 `;
-const ContentX = styled(Content)`
+const ContentX = styled.div`
       background: white;
 `;
 
