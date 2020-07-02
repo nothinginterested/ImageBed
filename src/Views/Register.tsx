@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import {Form, Input, Button, Checkbox, Layout} from 'antd';
 import {useStore} from '../Store';
+import {useHistory} from 'react-router';
+
 const {Header, Content, Footer} = Layout;
 const FormRegister = styled.section`
       background: white;
@@ -29,16 +31,17 @@ const tailLayout = {
 };
 
 
-const Register =  ()=> {
+const Register = () => {
     const {AuthStore} = useStore();
+    let history = useHistory();
 
     const onFinish = (values: any) => {
 
         console.log('Success:', values);
-        AuthStore.setUsername(values.username)
-        AuthStore.setUserpassword(values.password)
-        AuthStore.register().then()
-
+        AuthStore.setUsername(values.username);
+        AuthStore.setUserpassword(values.password);
+        AuthStore.register().then();
+        history.push('/login');
 
     };
 

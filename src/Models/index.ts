@@ -21,8 +21,21 @@ const Auth = {
                 }
             );
         });
+    },
+    login(username: string, userpassword: string) {
+        return new Promise((resolve, reject) => {
+            AV.User.logIn(username, userpassword).then(
+                (user) => {
+                    resolve(user);
+                }, (error) => {
+                    reject(error);
+                });
 
+        });
 
+    },
+    fetchUser(){
+        return AV.User.current()
     }
 };
 export default Auth;
