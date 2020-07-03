@@ -49,44 +49,44 @@ const Register = () => {
     };
 
     return (
-            <ContentX style={{padding: '0 50px'}}>
-                <FormRegister>
-                    <Form
-                        {...layout}
-                        name="basic"
-                        initialValues={{remember: true}}
-                        onFinish={onFinish}
-                        onFinishFailed={onFinishFailed}
+        <ContentX style={{padding: '0 50px'}}>
+            <FormRegister>
+                <Form
+                    {...layout}
+                    name="basic"
+                    initialValues={{remember: true}}
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
 
+                >
+                    <Form.Item
+                        label="Username"
+                        name="username"
+                        rules={[{required: true, message: 'Please input your username!'}]}
                     >
-                        <Form.Item
-                            label="Username"
-                            name="username"
-                            rules={[{required: true, message: 'Please input your username!'}]}
-                        >
-                            <Input placeholder='请输入用户名'/>
-                        </Form.Item>
+                        <Input placeholder='请输入用户名'/>
+                    </Form.Item>
 
-                        <Form.Item
-                            label="Password"
-                            name="password"
-                            rules={[{required: true, message: 'Please input your password!'}]}
-                        >
-                            <Input.Password placeholder='请输入密码'/>
-                        </Form.Item>
+                    <Form.Item
+                        label="Password"
+                        name="password"
+                        rules={[{required: true, message: 'Please input your password!'}]}
+                    >
+                        <Input.Password placeholder='请输入密码'/>
+                    </Form.Item>
 
-                        <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-                            <Checkbox>Remember me</Checkbox>
-                        </Form.Item>
+                    <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+                        <Checkbox>Remember me</Checkbox>
+                    </Form.Item>
 
-                        <Form.Item {...tailLayout}>
-                            <Button type="primary" htmlType="submit">
-                                Submit
-                            </Button>
-                        </Form.Item>
-                    </Form>
-                </FormRegister>
-            </ContentX>
+                    <Form.Item {...tailLayout}>
+                        <Button type="primary" htmlType="submit">
+                            Submit
+                        </Button>
+                    </Form.Item>
+                </Form>
+            </FormRegister>
+        </ContentX>
     );
 };
 
