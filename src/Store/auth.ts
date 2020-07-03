@@ -1,6 +1,6 @@
 import React from 'react';
 import {action, observable} from 'mobx';
-import Auth from '../Models';
+import {Auth} from '../Models';
 import user from './user';
 
 

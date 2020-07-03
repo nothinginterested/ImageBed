@@ -34,7 +34,7 @@ const tailLayout = {
 const Login = () => {
 
 
-    const {AuthStore,userStore} = useStore();
+    const {AuthStore,UserStore} = useStore();
     let history = useHistory();
 
     const onFinish = (values: any) => {
@@ -45,7 +45,7 @@ const Login = () => {
         AuthStore.login().then((user) => {
             console.log('hhhhh');
             console.log(user);
-            userStore.setUser()
+            UserStore.setUser()
 
         }).catch((e)=>{
             console.log('----------');

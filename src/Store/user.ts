@@ -1,14 +1,17 @@
 import {action, observable} from 'mobx';
-import Auth from '../Models';
+import {Auth} from '../Models';
+import AV, {User} from 'leancloud-storage';
+
+
 
 class userStore {
-    @observable user={};
+    @observable currentUser :AV.User | null =null;
 
     @action setUser() {
-        this.user = Auth.fetchUser();
+        this.currentUser = Auth.fetchUser();
 
     }
 }
 
 
-export default new userStore()
+export default new userStore();

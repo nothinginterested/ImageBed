@@ -34,8 +34,24 @@ const Auth = {
         });
 
     },
-    fetchUser(){
-        return AV.User.current()
+    fetchUser() {
+        return AV.User.current();
     }
 };
-export default Auth;
+
+
+const Uploader = {
+    add(fileName: string, file: any) {
+        const item = new AV.Object('Image');
+        const avFile = new AV.File(fileName, file);
+        item.set('filename', fileName);
+        item.set('owner', AV.User.current());
+        item.set('url', avFile);
+        return new Promise((resolve, reject) => {
+            item.save().then(serverFile => resolve(serverFile), error => reject(error));
+        });
+
+
+    }
+};
+export  {Auth, Uploader};
