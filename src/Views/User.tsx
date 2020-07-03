@@ -3,11 +3,9 @@ import LayoutX from '../Components/Layout';
 
 const Users=()=> {
     return (
-        <LayoutX>
             <h2>
                 user
             </h2>
-        </LayoutX>
     )
 }
 

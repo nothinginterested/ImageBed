@@ -49,7 +49,6 @@ const Register = () => {
     };
 
     return (
-        <LayoutX>
             <ContentX style={{padding: '0 50px'}}>
                 <FormRegister>
                     <Form
@@ -88,7 +87,6 @@ const Register = () => {
                     </Form>
                 </FormRegister>
             </ContentX>
-        </LayoutX>
     );
 };
 

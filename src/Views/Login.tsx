@@ -61,7 +61,6 @@ const Login = () => {
     };
 
     return (
-        <LayoutX>
             <ContentX style={{padding: '0 50px'}}>
                 <FormLogin>
                     <Form
@@ -100,7 +99,6 @@ const Login = () => {
                     </Form>
                 </FormLogin>
             </ContentX>
-        </LayoutX>
     );
 };
 export default Login;

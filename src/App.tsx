@@ -10,17 +10,18 @@ import Login from './Views/Login';
 import Register from './Views/Register';
 import Users from './Views/User';
 import Upload from './Views/Upload';
+import LayoutX from './Components/Layout';
 
 export default function App() {
     return (
+
         <Router>
             <div>
+                <LayoutX/>
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
-                    <Route path="/about">
-                        <About/>
-                    </Route>
+
                     <Route path="/users">
                         <Users/>
                     </Route>

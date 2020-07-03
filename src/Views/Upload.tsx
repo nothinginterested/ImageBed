@@ -4,15 +4,11 @@ import {Layout} from 'antd';
 const {Content} = Layout;
 const Upload = () => {
     return (
-        <LayoutX>
-            <Content>
                 <div>
                     upload
-                </div>l
+                </div>
 
-            </Content>
 
-        </LayoutX>
 
     );
 

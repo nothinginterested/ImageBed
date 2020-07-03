@@ -1,54 +1,64 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {Layout, Menu, Button} from 'antd';
-import {Link, useHistory} from 'react-router-dom';
+import {Link, useHistory, useParams, withRouter} from 'react-router-dom';
+import {ClickParam} from 'antd/lib/menu';
 
 const {Header} = Layout;
 const {Content} = Layout;
-const header=styled(Header)`
+const header = styled(Header)`
       background: white;
-`
+`;
 
-const LayoutX = (props: any) => {
+const LayoutX = (props:any) => {
+    console.log('app');
     let history = useHistory();
-    const handleLogin = () => {
-        console.log('login');
-        history.push('/login');
+    console.log(props.location);
+    const [key, setKey] = useState<string>('3');
+    let a = useParams();
+    console.log(a);
+    useEffect(() => {
+        // console.log(slug);
+
+    }, []);
+    console.log(key);
+    const handleClick = (e: ClickParam) => {
+        setKey(e.key);
 
     };
-    const handleRegister = () => {
-        console.log('register');
-        history.push('/register');
+    const handleClick2 = () => {
+        history.push('/login');
+        setKey('2');
+
     };
+
     return (
         <Layout className='layout'>
-            <header >
+            <header>
                 <div className="logo"/>
-                <Menu  mode="horizontal" defaultSelectedKeys={['2']}>
+                <Menu mode="horizontal" onClick={handleClick}>
                     <Menu.Item key="1">
                         <Link to="/"> 主页</Link>
                     </Menu.Item>
                     <Menu.Item key="2">
-
-                        <Link to="/about">About</Link>
-                    </Menu.Item>
-                    <Menu.Item key="3">
                         <Link to="/users">Users</Link>
                     </Menu.Item>
-                    <Menu.Item key="4">
-                        <Button onClick={handleLogin}>登录</Button>
+                    <Menu.Item key="3">
+                        <Link to="/login">登录</Link>
                     </Menu.Item>
-                    <Menu.Item key="5">
-                        <Button onClick={handleRegister}>注册</Button>
+                    <Menu.Item key="4">
+                        <Link to="/register">注册</Link>
                     </Menu.Item>
 
                 </Menu>
             </header>
-            <Content style={{background:'white'}}>
+            <Content style={{background: 'white'}}>
                 {props.children}
 
             </Content>
-
+            <button onClick={handleClick2}>
+                ccc
+            </button>
         </Layout>
     );
 };
