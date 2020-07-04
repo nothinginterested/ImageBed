@@ -19,8 +19,6 @@ const LayoutX = observer((props: any) => {
         UserStore.setUser();
     }, []);
     let current = UserStore.currentUser;
-    console.log('渲染了');
-    console.log(UserStore.currentUser);
     const logout=()=>{
         AuthStore.logout()
     }
@@ -33,9 +31,7 @@ const LayoutX = observer((props: any) => {
                     <Menu.Item key="/">
                         <Link to="/"> 主页</Link>
                     </Menu.Item>
-                    <Menu.Item key="/users">
-                        <Link to="/users">Users</Link>
-                    </Menu.Item>
+
                     {current
                         ? <Menu.Item key="/login">
                             {current.attributes.username}

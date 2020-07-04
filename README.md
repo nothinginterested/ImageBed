@@ -3,6 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+## 这是一款React练手项目，基于Mobx，ReactHook，TypeScript的图床应用
 
 ### `yarn start`
 

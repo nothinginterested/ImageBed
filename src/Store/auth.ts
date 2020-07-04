@@ -36,10 +36,8 @@ class AuthStore {
         return new Promise((resolve, reject) => {
             Auth.login(this.values.username, this.values.password
             ).then((user) => {
-                console.log(user);
                 resolve(user);
             }, (error) => {
-                console.log('hhhhh');
                 reject(error);
 
             });

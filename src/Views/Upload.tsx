@@ -27,7 +27,6 @@ const Image=styled.img`
 
 const UploadX = observer(() => {
     const {ImageStore, UserStore} = useStore();
-    console.log('upload');
 
     useEffect(() => {
 

@@ -14,10 +14,8 @@ const Auth = {
         return new Promise((resolve, reject) => {
             user.signUp().then(
                 (user) => {
-                    console.log(user);
                     resolve(user);
                 }, (error) => {
-                    console.log(error);
                 }
             );
         });

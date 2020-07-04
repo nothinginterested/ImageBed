@@ -43,13 +43,9 @@ const Login = () => {
         AuthStore.setUsername(values.username);
         AuthStore.setUserpassword(values.password);
         AuthStore.login().then((user) => {
-            console.log('hhhhh');
-            console.log(user);
             UserStore.setUser()
 
         }).catch((e)=>{
-            console.log('----------');
-            console.dir(e.code);
         });
 
         history.push('/');
