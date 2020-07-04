@@ -11,6 +11,10 @@ class userStore {
         this.currentUser = Auth.fetchUser();
 
     }
+    @action resetUser(){
+        this.currentUser=null
+    }
+
 }
 
 

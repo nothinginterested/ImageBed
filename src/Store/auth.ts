@@ -2,7 +2,11 @@ import React from 'react';
 import {action, observable} from 'mobx';
 import {Auth} from '../Models';
 import user from './user';
+type TInfo ={
+    username:string,
+    password:string
 
+}
 
 class AuthStore {
     @observable values: TInfo = {
@@ -42,6 +46,10 @@ class AuthStore {
 
         });
 
+    }
+    @action logout(){
+        Auth.logout()
+        user.resetUser()
     }
 
 }

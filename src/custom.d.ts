@@ -1,8 +1,4 @@
-type TInfo ={
-    username:string,
-    password:string
 
-}
 /*Owner*/
 export class Owner {
     __type: string;

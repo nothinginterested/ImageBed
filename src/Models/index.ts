@@ -36,6 +36,10 @@ const Auth = {
     },
     fetchUser() {
         return AV.User.current();
+    },
+    logout(){
+      AV.User.logOut()
+
     }
 };
 

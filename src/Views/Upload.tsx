@@ -27,9 +27,10 @@ const Image=styled.img`
 
 const UploadX = observer(() => {
     const {ImageStore, UserStore} = useStore();
+    console.log('upload');
 
     useEffect(() => {
-        UserStore.setUser();
+
         ImageStore.fetchCurrentFile()
 
     }, []);
@@ -65,7 +66,7 @@ const UploadX = observer(() => {
                     band files
                 </p>
             </Dragger>,
-            {ImageStore.serverFile ?
+            {ImageStore.serverFile&&UserStore.currentUser ?
 
                 <Sectionx>
                     <h1>上传结果</h1>
